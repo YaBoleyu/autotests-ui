@@ -1,3 +1,4 @@
+import pytest
 from playwright.sync_api import sync_playwright, expect
 """
 Откроет страницу https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration

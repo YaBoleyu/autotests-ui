@@ -1,3 +1,4 @@
+import pytest
 from playwright.sync_api import sync_playwright, expect
 """
 Открыть страницу https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration
@@ -14,7 +15,8 @@ from playwright.sync_api import sync_playwright, expect
 page_url = "https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration"
 courses_url = "https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses"
 
-
+@pytest.mark.courses
+@pytest.mark.regression
 def test_empty_courses_list():
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch(headless=False)
