@@ -9,12 +9,7 @@ from playwright.sync_api import sync_playwright, expect
 
 """
 
-
 pageUrl = "https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration"
-emailField = "//label[text()='Email']"
-usernameField = "//label[text()='Username']"
-passwordField = "//label[text()='Password']"
-registrationButton = "//button[@data-testid='registration-page-registration-button']"
 
 
 def test_registration_button_disabled():
@@ -23,10 +18,10 @@ def test_registration_button_disabled():
         page = browser.new_page()
         page.goto(pageUrl)
 
-        email_input = page.locator(emailField)
-        password_input = page.locator(passwordField)
-        username_input = page.locator(usernameField)
-        register_button = page.locator(registrationButton)
+        email_input = page.get_by_test_id('registration-form-email-input').locator('input')
+        password_input = page.get_by_test_id('registration-form-password-input').locator('input')
+        username_input = page.get_by_test_id('registration-form-username-input').locator('input')
+        register_button = page.get_by_test_id('registration-page-registration-button')
 
         expect(register_button).to_be_disabled()
         email_input.fill("sample.user@mail.ru")
