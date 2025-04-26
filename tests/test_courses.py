@@ -1,5 +1,6 @@
 import pytest
-from playwright.sync_api import sync_playwright, expect
+from playwright.sync_api import sync_playwright, expect, Page, Playwright
+
 """
 Открыть страницу https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration
 Заполнить форму регистрации и нажать на кнопку "Registration"
@@ -17,33 +18,27 @@ courses_url = "https://nikita-filonov.github.io/qa-automation-engineer-ui-course
 
 @pytest.mark.courses
 @pytest.mark.regression
-def test_empty_courses_list():
-        with sync_playwright() as playwright:
-            browser = playwright.chromium.launch(headless=False)
-            context = browser.new_context()
-            page = context.new_page()
-            page.goto(page_url)
+def test_with_clean_page(chromium_page: Page):
+    page = chromium_page
+    page.goto(page_url)
+    email_input = page.get_by_test_id('registration-form-email-input').locator('input')
+    password_input = page.get_by_test_id('registration-form-password-input').locator('input')
+    username_input = page.get_by_test_id('registration-form-username-input').locator('input')
+    register_button = page.get_by_test_id('registration-page-registration-button')
 
-            email_input = page.get_by_test_id('registration-form-email-input').locator('input')
-            password_input = page.get_by_test_id('registration-form-password-input').locator('input')
-            username_input = page.get_by_test_id('registration-form-username-input').locator('input')
-            register_button = page.get_by_test_id('registration-page-registration-button')
+    email_input.fill("sample_user@mail.ru")
+    username_input.fill("username")
+    password_input.fill("someWackyPassword")
+    register_button.click()
 
-            email_input.fill("sample_user@mail.ru")
-            username_input.fill("username")
-            password_input.fill("someWackyPassword")
-            expect(register_button).to_be_enabled()
-            register_button.click()
-            context.storage_state(path="browser-state.json")
-        with sync_playwright() as playwright:
-            browser = playwright.chromium.launch(headless=False)
-            context = browser.new_context(storage_state='browser-state.json')
-            page = context.new_page()
 
-            courses_text = page.get_by_test_id("courses-list-toolbar-title-text")
-            courses_test_block = page.get_by_test_id("courses-list-empty-view-title-text")
+def test_empty_courses_list(chromium_page_with_state: Page):
+    page = chromium_page_with_state
+    page.goto(courses_url)
+    courses_text = page.get_by_test_id("courses-list-toolbar-title-text")
+    courses_test_block = page.get_by_test_id("courses-list-empty-view-title-text")
 
-            page.goto(courses_url)
-            expect(courses_text).to_be_visible()
-            expect(courses_test_block).to_be_visible()
-            expect(courses_test_block).to_have_text('There is no results')
+    expect(courses_text).to_be_visible()
+    expect(courses_test_block).to_be_visible()
+    expect(courses_test_block).to_have_text('There is no results')
+
