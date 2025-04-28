@@ -19,7 +19,7 @@ from pages.dashboard_page import DashboardPage
 def test_registration(registration_page: RegistrationPage, dashboard_page: DashboardPage):
     registration_page.fill_registration_form("username@mail.com","123321","username")
     registration_page.click_registration_button()
-    dashboard_page.validate_dashboard_text()
+    dashboard_page.check_visible_dashboard_title()
 
 @pytest.mark.regression
 @pytest.mark.registration

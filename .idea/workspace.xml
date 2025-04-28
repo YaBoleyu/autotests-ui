@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="960bf57c-75f6-4ded-9cb2-d47e812bed07" name="Changes" comment="Фикстуры Pytest. Практика с Pytest и Playwright">
+    <list default="true" id="960bf57c-75f6-4ded-9cb2-d47e812bed07" name="Changes" comment="Знакомство с PageObject. Практика с Playwright">
+      <change afterPath="$PROJECT_DIR$/pages/courses_list_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/create_course_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/files/image.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/files/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_create_course.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_authorization.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_authorization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixtures/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixtures/pages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dashboard_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_playwright_registration.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_playwright_registration.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +60,7 @@
     "Python tests.Python tests for test_authorization.test_wrong_email_or_password_authorization.executor": "Run",
     "Python tests.Python tests for test_courses.test_empty_courses_list.executor": "Run",
     "Python tests.Python tests for test_courses.test_with_clean_page.executor": "Run",
+    "Python tests.Python tests for test_create_course.test_create_course.executor": "Run",
     "Python tests.Python tests for test_playwright_courses.test_courses.executor": "Run",
     "Python tests.Python tests for test_playwright_registration.test_registration.executor": "Run",
     "Python.playwright_registration.executor": "Run",
@@ -62,11 +70,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\boomer\PycharmProjects\autotests-ui\testdata" />
+      <recent name="C:\Users\boomer\PycharmProjects\autotests-ui\testdata\files" />
       <recent name="C:\Users\boomer\PycharmProjects\autotests-ui\tests" />
       <recent name="C:\Users\boomer\PycharmProjects\autotests-ui" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_authorization.test_wrong_email_or_password_authorization">
+  <component name="RunManager" selected="Python tests.Python tests for test_create_course.test_create_course">
     <configuration name="Python tests for test_authorization.test_wrong_email_or_password_authorization" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="autotests-ui" />
       <option name="ENV_FILES" value="" />
@@ -112,7 +122,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_playwright_courses.test_courses" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_create_course.test_create_course" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="autotests-ui" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,7 +133,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_playwright_courses.test_courses&quot;" />
+      <option name="_new_target" value="&quot;test_create_course.test_create_course&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -142,73 +152,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.playwright_courses.test_registration_button_disabled" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="autotests-ui" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.playwright_courses.test_registration_button_disabled&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for tests.playwright_registration_button.test_registration_button_disabled" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="autotests-ui" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.playwright_registration_button.test_registration_button_disabled&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for tests.test_playwright_courses" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="autotests-ui" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_playwright_courses&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for tests.test_playwright_registration_button.test_registration_button_disabled" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="autotests-ui" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_playwright_registration_button.test_registration_button_disabled&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_authorization.test_wrong_email_or_password_authorization" />
-        <item itemvalue="Python tests.Python tests for test_courses.test_with_clean_page" />
-        <item itemvalue="Python tests.Python tests for test_courses.test_empty_courses_list" />
+        <item itemvalue="Python tests.Python tests for test_create_course.test_create_course" />
         <item itemvalue="Python tests.Python tests for test_playwright_registration.test_registration" />
-        <item itemvalue="Python tests.Python tests for test_playwright_courses.test_courses" />
+        <item itemvalue="Python tests.Python tests for test_courses.test_with_clean_page" />
+        <item itemvalue="Python tests.Python tests for test_authorization.test_wrong_email_or_password_authorization" />
+        <item itemvalue="Python tests.Python tests for test_courses.test_empty_courses_list" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +226,39 @@
       <option name="project" value="LOCAL" />
       <updated>1745711837309</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=" Параметризация Pytest. Практика с Pytest и Playwright">
+      <option name="closed" value="true" />
+      <created>1745713092747</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1745713092747</updated>
+    </task>
+    <task id="LOCAL-00008" summary=" Параметризация Pytest. Практика с Pytest и Playwright">
+      <option name="closed" value="true" />
+      <created>1745856055705</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745856055705</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Знакомство с PageObject. Практика с Playwright">
+      <option name="closed" value="true" />
+      <created>1745856148354</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1745856148354</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Знакомство с PageObject. Практика с Playwright">
+      <option name="closed" value="true" />
+      <created>1745856181398</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1745856181398</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,6 +279,8 @@
     <MESSAGE value="Интеграция Pytest и Playwright. Практика с Pytest и Playwright" />
     <MESSAGE value="Маркировки Pytest. Практика с Pytest и Playwright" />
     <MESSAGE value="Фикстуры Pytest. Практика с Pytest и Playwright" />
-    <option name="LAST_COMMIT_MESSAGE" value="Фикстуры Pytest. Практика с Pytest и Playwright" />
+    <MESSAGE value=" Параметризация Pytest. Практика с Pytest и Playwright" />
+    <MESSAGE value="Знакомство с PageObject. Практика с Playwright" />
+    <option name="LAST_COMMIT_MESSAGE" value="Знакомство с PageObject. Практика с Playwright" />
   </component>
 </project>
