@@ -1,6 +1,9 @@
 import pytest
 from playwright.sync_api import sync_playwright, expect, Page, Playwright
 
+from pages.courses_list_page import CoursesListPage
+from pages.dashboard_page import DashboardPage
+
 """
 Открыть страницу https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration
 Заполнить форму регистрации и нажать на кнопку "Registration"
@@ -32,13 +35,13 @@ def test_with_clean_page(chromium_page: Page):
     register_button.click()
 
 
-def test_empty_courses_list(chromium_page_with_state: Page):
-    page = chromium_page_with_state
-    page.goto(courses_url)
-    courses_text = page.get_by_test_id("courses-list-toolbar-title-text")
-    courses_test_block = page.get_by_test_id("courses-list-empty-view-title-text")
-
-    expect(courses_text).to_be_visible()
-    expect(courses_test_block).to_be_visible()
-    expect(courses_test_block).to_have_text('There is no results')
+@pytest.mark.courses
+@pytest.mark.regression
+def test_empty_courses_list(dashboard_page_with_state: DashboardPage, courses_list_page: CoursesListPage):
+    dashboard_page_with_state.page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
+    dashboard_page_with_state.navbar.check_visible("username")
+    dashboard_page_with_state.sidebar.check_visible()
+    courses_list_page.check_visible_courses_title()
+    courses_list_page.check_visible_create_course_button()
+    courses_list_page.check_visible_empty_view()
 
