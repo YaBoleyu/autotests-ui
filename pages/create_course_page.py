@@ -6,7 +6,7 @@ from pages.base_page import BasePage
 class CreateCoursePage(BasePage):
     def __init__(self, page: Page):
         super().__init__(page)
-        page.goto('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create')
+
         self.create_course_title = page.get_by_test_id('create-course-toolbar-title-text')
         self.create_course_button = page.get_by_test_id('create-course-toolbar-create-course-button')
 
@@ -52,6 +52,9 @@ class CreateCoursePage(BasePage):
     def check_visible_create_course_title(self):
         expect(self.create_course_title).to_be_visible()
         expect(self.create_course_title).to_have_text('Create course')
+
+    def check_visible_courses_title(self):
+        expect(self.course_title)
 
     def click_create_course_button(self):
         self.create_course_button.click()

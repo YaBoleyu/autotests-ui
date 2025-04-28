@@ -31,7 +31,7 @@ def initialize_browser_state(playwright: Playwright):
     browser.close()
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def chromium_page_with_state(initialize_browser_state, playwright: Playwright) -> Page:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context(storage_state="../browser-state.json")

@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="960bf57c-75f6-4ded-9cb2-d47e812bed07" name="Changes" comment="Знакомство с PageObject. Практика с Playwright">
-      <change afterPath="$PROJECT_DIR$/pages/courses_list_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/create_course_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/files/image.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/files/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_create_course.py" afterDir="false" />
+    <list default="true" id="960bf57c-75f6-4ded-9cb2-d47e812bed07" name="Changes" comment="Практикуемся в реализации PageObject. Практика с Playwright">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixtures/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixtures/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/dashboard_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_playwright_registration.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_playwright_registration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/create_course_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create_course_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_create_course.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_create_course.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745856181398</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Практикуемся в реализации PageObject. Практика с Playwright">
+      <option name="closed" value="true" />
+      <created>1745862726521</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1745862726521</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,6 +284,7 @@
     <MESSAGE value="Фикстуры Pytest. Практика с Pytest и Playwright" />
     <MESSAGE value=" Параметризация Pytest. Практика с Pytest и Playwright" />
     <MESSAGE value="Знакомство с PageObject. Практика с Playwright" />
-    <option name="LAST_COMMIT_MESSAGE" value="Знакомство с PageObject. Практика с Playwright" />
+    <MESSAGE value="Практикуемся в реализации PageObject. Практика с Playwright" />
+    <option name="LAST_COMMIT_MESSAGE" value="Практикуемся в реализации PageObject. Практика с Playwright" />
   </component>
 </project>
